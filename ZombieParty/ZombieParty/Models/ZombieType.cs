@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace ZombieParty.Models
 {
@@ -21,6 +22,8 @@ namespace ZombieParty.Models
 
         public int Point { get; set; }
 
+
+        [ValidateNever]
         public List<Zombie> Zombies { get; set; }
 
      
